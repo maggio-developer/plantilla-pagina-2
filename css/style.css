@@ -2,6 +2,8 @@ html {
   scroll-behavior: smooth;
 }
 
+
+
 :root{
   --amarillo-principal: #ffd60b;
   --rojo-principal: #E10600;
@@ -14,7 +16,7 @@ html {
   --azul-claro: #368deb;
   --violeta-claro: #a580bd;
 
-  --amarillo-oscuro: #e6b800;
+  --amarillo-oscuro: #eebe00;
   --rojo-oscuro: #a51914;
   --azul-oscuro: #0d539e;
 
@@ -63,17 +65,18 @@ body{
   padding: 0;
 }
 
+
 h1, h2, h3{
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
 }
 
 h2{
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 h3{
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 a{
@@ -89,17 +92,15 @@ a{
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-    
-  background-color: var(--amarillo-principal);
 
   position:fixed;
   top: 0;
   z-index: 1000;
 
   transform: translateY(-100%);
-  filter: blur(25px);
-  animation: slideDown 1s ease forwards;
   box-shadow: 0 2px 20px rgba(0,0,0,0.4);
+  animation: slideDown 1s ease forwards;
+  background-color: var(--amarillo-principal);
 }
 
 /*NAV*/
@@ -125,7 +126,6 @@ a{
   font-weight: 400;
   font-size: 1.05rem;
   padding: 5px 20px;
-  transition: all 0.5s ease;
   width: 110px;
   text-align: center;
   position: relative;
@@ -154,9 +154,15 @@ nav a:hover::after {
 }
 
 .logo{
+  background-color: var(--amarillo-principal);
+  display: flex;
+  justify-content: center;
+  width: 100%;
   font-size: 2.6rem;
   padding: 5px 0;
+  z-index: 9999;
 }
+
 
 /*HERO*/
 
@@ -166,7 +172,7 @@ nav a:hover::after {
   background-position: center;
   background-repeat: no-repeat;
   filter:contrast(50px);
-  height: 75vh;
+  height: 80vh;
 
   display: flex;
   flex-direction: column;
@@ -241,8 +247,8 @@ nav a:hover::after {
   background-image: url("../assets/decorations/plane.jpg");
   background-repeat: repeat-x;
   object-fit:cover;
-  height: 150px;
-  background-size: 450px;
+  height: 120px;
+  background-size: 400px;
 }
 
 
@@ -277,7 +283,6 @@ nav a:hover::after {
   border-radius: 12px;
   width: fit-content;
   text-align: center;
-  transition: 0.3s;
 }
 
 .seccion-producto-img{
@@ -311,6 +316,73 @@ nav a:hover::after {
 
 
 
+
+/*MOVIL, NAV HAMBURGUESA, FONT ACHICADA*/
+@media (max-width: 990px) {
+  .logo{
+    justify-content: space-between;
+  }
+  .nav {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    transform: translateY(-500px);
+    transition: visibility 0.8s ease, opacity 0.8s ease;
+  }
+
+  .nav.active {
+    opacity: 1;
+    visibility: visible;
+    position:relative;
+    transform: translateY(0px);
+  }
+  .nav-content{
+    width: 100%;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-content > a{
+    margin-left: 0;
+    padding-left: 0;
+    width: 100vw;
+  }
+
+  .menu-toggle {
+    display: block;
+    position: relative;
+    visibility: visible;
+    right: 15px;
+  }
+
+  .hero{
+    padding-left: 0%;
+  }
+  
+  .hero-content{
+    height: 80%;
+    text-align: center;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+    
+  .hero h1{
+    font-size: 2.8rem;
+    padding: 0 30px;
+  }
+
+  .hero p{
+    font-size: calc(1vw + 0.8rem);
+    padding: 0 32px;
+  }
+
+}
 
 
 
@@ -354,5 +426,5 @@ nav a:hover::after {
   background: var(--amarillo-claro);
   color: var(--negro);
   width: 100%;
-  height: 300px;
+  height: 200px;
 }
