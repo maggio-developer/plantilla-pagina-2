@@ -2,8 +2,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
-
 :root{
   --amarillo-principal: #ffd60b;
   --rojo-principal: #E10600;
@@ -100,7 +98,7 @@ a{
   transform: translateY(-100%);
   box-shadow: 0 2px 20px rgba(0,0,0,0.4);
   animation: slideDown 1s ease forwards;
-  background-color: var(--amarillo-principal);
+  background-color: var(--blanco);
 }
 
 /*NAV*/
@@ -111,7 +109,7 @@ a{
   display: flex;
   justify-content: center;
 
-  background-color: var(--amarillo-oscuro);
+  background-color: var(--gris-claro);
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
@@ -154,7 +152,7 @@ nav a:hover::after {
 }
 
 .logo{
-  background-color: var(--amarillo-principal);
+  background-color: var(--blanco);
   display: flex;
   justify-content: center;
   width: 100%;
@@ -248,7 +246,7 @@ nav a:hover::after {
   background-repeat: repeat-x;
   object-fit:cover;
   height: 120px;
-  background-size: 400px;
+  background-size: 325px;
 }
 
 
@@ -257,7 +255,7 @@ nav a:hover::after {
 /*SECTIONS*/
 
 .section{
-    padding: 4% 20px;
+    padding: 2% 20px;
 }
 
 #seccion-productos{
@@ -276,6 +274,7 @@ nav a:hover::after {
   flex-wrap: wrap;
   width: 95%;
   justify-content: center;
+  padding: 35px 0;
 }
 
 .seccion-producto{
